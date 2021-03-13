@@ -28,6 +28,11 @@ namespace demoweb.Controllers
             return View();
         }
 
+        public IActionResult Persona()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
