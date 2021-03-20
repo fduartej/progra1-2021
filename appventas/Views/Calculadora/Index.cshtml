@@ -1,10 +1,10 @@
 @model Calculadora
 <form asp-controller="Calculadora" asp-action="MiMetodoExecute">
-     <label asp-for="Operando1" class="control-label"></label>
-     <input asp-for="Operando1" class="form-control" />
+     <label asp-for="Operador1" class="control-label"></label>
+     <input asp-for="Operador1" class="form-control" />
 
-     <label asp-for="Operando2" class="control-label"></label>
-     <input asp-for="Operando2" class="form-control" />
+     <label asp-for="Operador2" class="control-label"></label>
+     <input asp-for="Operador2" class="form-control" />
 
      <div class="form-group">
         <label asp-for="Operando" class="control-label"></label>
@@ -13,9 +13,9 @@
             <option value="/">Division</option>
         </select>
      </div>  
-     
+
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Registrar</button> 
+        <button type="submit" class="btn btn-primary">Calcular</button> 
     </div>              
 </form>
 <h1>@ViewData["Message"]</h1>
