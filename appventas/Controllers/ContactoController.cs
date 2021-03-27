@@ -20,8 +20,12 @@ namespace appventas.Controllers
 
         public IActionResult Index()
         {
+            var listcontactos = new List<Contacto>();
+            listcontactos.Add(new Contact(){FirstName="Juan", LastName="Perez"});
+            listcontactos.Add(new Contact(){FirstName="Bob", LastName="Marley"});
+            listcontactos.Add(new Contact(){FirstName="Kurt", LastName="Cobain"});
             ViewData["Message"] = "";
-            return View();
+            return View(listcontactos);
         }
 
         [HttpPost]
