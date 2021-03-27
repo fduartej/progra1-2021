@@ -1,6 +1,10 @@
 @model IEnumerable<appventas.Models.Contacto>
 
 <h2>Lista Contactos</h2>
+
+<p>
+    <a asp-action="Create">Create</a>
+</p>
 <table class="table table-hover">
      <thead class="thead-dark">
         <tr>
@@ -23,7 +27,7 @@
                     #
                 </th>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.FirstName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LastName)

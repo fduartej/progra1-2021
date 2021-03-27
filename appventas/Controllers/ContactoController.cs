@@ -21,11 +21,17 @@ namespace appventas.Controllers
         public IActionResult Index()
         {
             var listcontactos = new List<Contacto>();
-            listcontactos.Add(new Contact(){FirstName="Juan", LastName="Perez"});
-            listcontactos.Add(new Contact(){FirstName="Bob", LastName="Marley"});
-            listcontactos.Add(new Contact(){FirstName="Kurt", LastName="Cobain"});
+            listcontactos.Add(new Contacto(){FirstName="Juan", LastName="Perez"});
+            listcontactos.Add(new Contacto(){FirstName="Bob", LastName="Marley"});
+            listcontactos.Add(new Contacto(){FirstName="Kurt", LastName="Cobain"});
             ViewData["Message"] = "";
             return View(listcontactos);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -33,7 +39,7 @@ namespace appventas.Controllers
         {
             objContacto.Status = "Registrado";
             ViewData["Message"] = "El contacto ya esta " + objContacto.Status;
-            return View("Index");
+            return View();
         }
 
     }
