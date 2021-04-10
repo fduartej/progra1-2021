@@ -30,7 +30,7 @@ namespace appventas.Controllers
             listcontactos.Add(new Contacto(){FirstName="Bob", LastName="Marley"});
             listcontactos.Add(new Contacto(){FirstName="Kurt", LastName="Cobain"});
             */
-            var listContactos=_context.DataContactos.ToList();
+            var listcontactos = _context.DataContactos.ToList();
             ViewData["Message"] = "";
             return View(listcontactos);
         }
